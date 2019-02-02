@@ -14,7 +14,7 @@ var newCmd = &cobra.Command{
 	Short: "new generates new Go projects",
 	RunE: func(cmd *cobra.Command, args []string) error {
 		run := genny.WetRunner(context.Background())
-		gen := pathgen.New("changeme")
+		gen := pathgen.New("changeme", "timraymond")
 		run.With(gen)
 		return run.Run()
 	},
